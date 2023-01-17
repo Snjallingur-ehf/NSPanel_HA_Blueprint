@@ -81,6 +81,8 @@ The goal was to create a version that allows everyone to use the NSpanel fully l
               value: GRC
             - label: 'Hungarian'
               value: HUN
+            - label: 'Icelandic'
+              value: IS
             - label: 'Indonesian'
               value: IDN
             - label: 'Italian'
@@ -1529,6 +1531,7 @@ variables:
     {%- elif language == "HUN" -%} {{ ((as_timestamp(now())) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Hétfő,')| replace('Tue', 'Kedd,')| replace('Wed', 'Szerda,')| replace('Thu', 'Csütörtök,')| replace('Fri', 'Péntek,')| replace('Sat', 'Szombat,')| replace('Sun', 'Vasárnap,') }}
     {%- elif language == "NOR" -%} {{ ((as_timestamp(now())) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mandag,')| replace('Tue', 'Tirsdag,')| replace('Wed', 'Onsdag,')| replace('Thu', 'Torsdag,')| replace('Fri', 'Fredag,')| replace('Sat', 'Lørdag,')| replace('Sun', 'Søndag,') }}
     {%- elif language == "RUS" -%} {{ ((as_timestamp(now())) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Понедельник,')| replace('Tue', 'Вторник,')| replace('Wed', 'Среда,')| replace('Thu', 'Четверг,')| replace('Fri', 'Пятница,')| replace('Sat', 'Суббота,')| replace('Sun', 'Воскресение,') }}
+    {%- elif language == "IS" -%} {{ ((as_timestamp(now())) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mánudagur,')| replace('Tue', 'Þriðjudagur,')| replace('Wed', 'Miðvikudagur,')| replace('Thu', 'Fimmtudagur,')| replace('Fri', 'Föstudagur,')| replace('Sat', 'Laugardagur,')| replace('Sun', 'Sunnudagur,') }}
     {%- endif -%}
   date02_mui: >-
     {%- if language == "DEU" -%} {{ ((as_timestamp(now()) + 86400) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Montag,')| replace('Tue', 'Dienstag,')| replace('Wed', 'Mittwoch,')| replace('Thu', 'Donnerstag,')| replace('Fri', 'Freitag,')| replace('Sat', 'Samstag,')| replace('Sun', 'Sonntag,') }}
@@ -1557,6 +1560,7 @@ variables:
     {%- elif language == "HUN" -%} {{ ((as_timestamp(now()) + 86400) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Hétfő,')| replace('Tue', 'Kedd,')| replace('Wed', 'Szerda,')| replace('Thu', 'Csütörtök,')| replace('Fri', 'Péntek,')| replace('Sat', 'Szombat,')| replace('Sun', 'Vasárnap,') }}
     {%- elif language == "NOR" -%} {{ ((as_timestamp(now()) + 86400) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mandag,')| replace('Tue', 'Tirsdag,')| replace('Wed', 'Onsdag,')| replace('Thu', 'Torsdag,')| replace('Fri', 'Fredag,')| replace('Sat', 'Lørdag,')| replace('Sun', 'Søndag,') }}
     {%- elif language == "RUS" -%} {{ ((as_timestamp(now()) + 86400) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Понедельник,')| replace('Tue', 'Вторник,')| replace('Wed', 'Среда,')| replace('Thu', 'Четверг,')| replace('Fri', 'Пятница,')| replace('Sat', 'Суббота,')| replace('Sun', 'Воскресение,') }}
+    {%- elif language == "IS" -%} {{ ((as_timestamp(now()) + 86400)  | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mánudagur,')| replace('Tue', 'Þriðjudagur,')| replace('Wed', 'Miðvikudagur,')| replace('Thu', 'Fimmtudagur,')| replace('Fri', 'Föstudagur,')| replace('Sat', 'Laugardagur,')| replace('Sun', 'Sunnudagur,') }}
     {%- endif -%}
   date03_mui: >-
     {%- if language == "DEU" -%} {{ ((as_timestamp(now()) + 172800) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Montag,')| replace('Tue', 'Dienstag,')| replace('Wed', 'Mittwoch,')| replace('Thu', 'Donnerstag,')| replace('Fri', 'Freitag,')| replace('Sat', 'Samstag,')| replace('Sun', 'Sonntag,') }}
@@ -1585,6 +1589,7 @@ variables:
     {%- elif language == "HUN" -%} {{ ((as_timestamp(now()) + 172800) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Hétfő,')| replace('Tue', 'Kedd,')| replace('Wed', 'Szerda,')| replace('Thu', 'Csütörtök,')| replace('Fri', 'Péntek,')| replace('Sat', 'Szombat,')| replace('Sun', 'Vasárnap,') }}
     {%- elif language == "NOR" -%} {{ ((as_timestamp(now()) + 172800) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mandag,')| replace('Tue', 'Tirsdag,')| replace('Wed', 'Onsdag,')| replace('Thu', 'Torsdag,')| replace('Fri', 'Fredag,')| replace('Sat', 'Lørdag,')| replace('Sun', 'Søndag,') }}
     {%- elif language == "RUS" -%} {{ ((as_timestamp(now()) + 172800) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Понедельник,')| replace('Tue', 'Вторник,')| replace('Wed', 'Среда,')| replace('Thu', 'Четверг,')| replace('Fri', 'Пятница,')| replace('Sat', 'Суббота,')| replace('Sun', 'Воскресение,') }}
+    {%- elif language == "IS" -%} {{ ((as_timestamp(now()) + 172800)  | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mánudagur,')| replace('Tue', 'Þriðjudagur,')| replace('Wed', 'Miðvikudagur,')| replace('Thu', 'Fimmtudagur,')| replace('Fri', 'Föstudagur,')| replace('Sat', 'Laugardagur,')| replace('Sun', 'Sunnudagur,') }}
     {%- endif -%}
   date04_mui: >-
     {%- if language == "DEU" -%} {{ ((as_timestamp(now()) + 259200) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Montag,')| replace('Tue', 'Dienstag,')| replace('Wed', 'Mittwoch,')| replace('Thu', 'Donnerstag,')| replace('Fri', 'Freitag,')| replace('Sat', 'Samstag,')| replace('Sun', 'Sonntag,') }}
@@ -1613,6 +1618,7 @@ variables:
     {%- elif language == "HUN" -%} {{ ((as_timestamp(now()) + 259200) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Hétfő,')| replace('Tue', 'Kedd,')| replace('Wed', 'Szerda,')| replace('Thu', 'Csütörtök,')| replace('Fri', 'Péntek,')| replace('Sat', 'Szombat,')| replace('Sun', 'Vasárnap,') }}
     {%- elif language == "NOR" -%} {{ ((as_timestamp(now()) + 259200) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mandag,')| replace('Tue', 'Tirsdag,')| replace('Wed', 'Onsdag,')| replace('Thu', 'Torsdag,')| replace('Fri', 'Fredag,')| replace('Sat', 'Lørdag,')| replace('Sun', 'Søndag,') }}
     {%- elif language == "RUS" -%} {{ ((as_timestamp(now()) + 259200) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Понедельник,')| replace('Tue', 'Вторник,')| replace('Wed', 'Среда,')| replace('Thu', 'Четверг,')| replace('Fri', 'Пятница,')| replace('Sat', 'Суббота,')| replace('Sun', 'Воскресение,') }}
+    {%- elif language == "IS" -%} {{ ((as_timestamp(now()) + 259200)  | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mánudagur,')| replace('Tue', 'Þriðjudagur,')| replace('Wed', 'Miðvikudagur,')| replace('Thu', 'Fimmtudagur,')| replace('Fri', 'Föstudagur,')| replace('Sat', 'Laugardagur,')| replace('Sun', 'Sunnudagur,') }}
     {%- endif -%}
   date05_mui: >-
     {%- if language == "DEU" -%} {{ ((as_timestamp(now()) + 345600) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Montag,')| replace('Tue', 'Dienstag,')| replace('Wed', 'Mittwoch,')| replace('Thu', 'Donnerstag,')| replace('Fri', 'Freitag,')| replace('Sat', 'Samstag,')| replace('Sun', 'Sonntag,') }}
@@ -1641,6 +1647,7 @@ variables:
     {%- elif language == "HUN" -%} {{ ((as_timestamp(now()) + 345600) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Hétfő,')| replace('Tue', 'Kedd,')| replace('Wed', 'Szerda,')| replace('Thu', 'Csütörtök,')| replace('Fri', 'Péntek,')| replace('Sat', 'Szombat,')| replace('Sun', 'Vasárnap,') }}
     {%- elif language == "NOR" -%} {{ ((as_timestamp(now()) + 345600) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mandag,')| replace('Tue', 'Tirsdag,')| replace('Wed', 'Onsdag,')| replace('Thu', 'Torsdag,')| replace('Fri', 'Fredag,')| replace('Sat', 'Lørdag,')| replace('Sun', 'Søndag,') }}
     {%- elif language == "RUS" -%} {{ ((as_timestamp(now()) + 345600) | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Понедельник,')| replace('Tue', 'Вторник,')| replace('Wed', 'Среда,')| replace('Thu', 'Четверг,')| replace('Fri', 'Пятница,')| replace('Sat', 'Суббота,')| replace('Sun', 'Воскресение,') }}
+    {%- elif language == "IS" -%} {{ ((as_timestamp(now()) + 345600)  | timestamp_custom('%a %d.%m' )) | replace('Mon', 'Mánudagur,')| replace('Tue', 'Þriðjudagur,')| replace('Wed', 'Miðvikudagur,')| replace('Thu', 'Fimmtudagur,')| replace('Fri', 'Föstudagur,')| replace('Sat', 'Laugardagur,')| replace('Sun', 'Sunnudagur,') }}
     {%- endif -%}
   day01_mui: >-
     {%- if language == "DEU" -%} Heute
@@ -1669,6 +1676,7 @@ variables:
     {%- elif language == "HUN" -%} Ma
     {%- elif language == "NOR" -%} I dag
     {%- elif language == "RUS" -%} Сегодня
+    {%- elif language == "IS" -%} Í dag
     {%- endif -%}
   day02_mui: >-
     {%- if language == "DEU" -%} Morgen
@@ -1697,6 +1705,7 @@ variables:
     {%- elif language == "HUN" -%} Holnap
     {%- elif language == "NOR" -%} I morgen
     {%- elif language == "RUS" -%} Завтра
+    {%- elif language == "IS" -%} Ámorgun
     {%- endif -%}
   day03_mui: >-
     {%- if language == "DEU" -%} in 2 Tagen
@@ -1725,6 +1734,7 @@ variables:
     {%- elif language == "HUN" -%} 2 nap múlva
     {%- elif language == "NOR" -%} om 2 dager
     {%- elif language == "RUS" -%} на 2 дня
+    {%- elif language == "IS" -%} Eftir 2 dagar
     {%- endif -%}
   day04_mui: >-
     {%- if language == "DEU" -%} in 3 Tagen
@@ -1753,6 +1763,7 @@ variables:
     {%- elif language == "HUN" -%} 3 nap múlva
     {%- elif language == "NOR" -%} om 3 dager
     {%- elif language == "RUS" -%} на 3 дня
+    {%- elif language == "IS" -%} Eftir 3 dagar
     {%- endif -%}
   day05_mui: >-
     {%- if language == "DEU" -%} in 4 Tagen
@@ -1781,6 +1792,7 @@ variables:
     {%- elif language == "HUN" -%} 4 nap múlva
     {%- elif language == "NOR" -%} om 4 dager
     {%- elif language == "RUS" -%} на 4 дня
+    {%- elif language == "IS" -%} Eftir 4 dagar
     {%- endif -%}
   on_mui: >-
     {%- if language == "DEU" -%} ein
@@ -1809,6 +1821,7 @@ variables:
     {%- elif language == "HUN" -%} a oldalon
     {%- elif language == "NOR" -%} på
     {%- elif language == "RUS" -%} включено
+    {%- elif language == "IS" -%} á
     {%- endif -%}
   off_mui: >-
     {%- if language == "DEU" -%} aus
@@ -1837,6 +1850,7 @@ variables:
     {%- elif language == "HUN" -%} off
     {%- elif language == "NOR" -%} av
     {%- elif language == "RUS" -%} выключено
+    {%- elif language == "IS" -%} af
     {%- endif -%}
   heat_mui: >-
     {%- if language == "DEU" -%} heizen
@@ -1865,6 +1879,7 @@ variables:
     {%- elif language == "HUN" -%} hő
     {%- elif language == "NOR" -%} varme
     {%- elif language == "RUS" -%} нагрев
+    {%- elif language == "IS" -%} hita
     {%- endif -%}
   please_confirm_mui: >-
     {%- if language == "DEU" -%} Bitte bestätigen
@@ -1893,6 +1908,7 @@ variables:
     {%- elif language == "HUN" -%} Kérjük, erősítse meg
     {%- elif language == "NOR" -%} Vennligst bekreft
     {%- elif language == "RUS" -%} Пожалуйста, подтвердите
+    {%- elif language == "IS" -%} Vinsamlega staðfesta
     {%- endif -%}
   
 
